@@ -1,0 +1,152 @@
+2025-06-26 06:36:51,806 - INFO - Starting Honeypot Server...
+2025-06-26 06:36:51,807 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+2025-06-26 06:36:51,807 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 06:39:24,772 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 06:39:24,772 - INFO - 172.20.0.1 - - [26/Jun/2025 06:39:24] "GET / HTTP/1.1" 200 -
+2025-06-26 06:39:24,946 - INFO - [unknown_path_access] 172.20.0.1 - GET /favicon.ico
+2025-06-26 06:39:24,947 - INFO - 172.20.0.1 - - [26/Jun/2025 06:39:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-26 06:39:27,660 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 06:39:27,660 - INFO - 172.20.0.1 - - [26/Jun/2025 06:39:27] "GET / HTTP/1.1" 200 -
+2025-06-26 06:39:27,672 - INFO - [unknown_path_access] 172.20.0.1 - GET /favicon.ico
+2025-06-26 06:39:27,672 - INFO - 172.20.0.1 - - [26/Jun/2025 06:39:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-26 06:40:13,864 - INFO - [admin_access] 172.20.0.1 - GET /admin
+2025-06-26 06:40:13,867 - INFO - 172.20.0.1 - - [26/Jun/2025 06:40:13] "GET /admin HTTP/1.1" 200 -
+2025-06-26 06:40:45,947 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 06:40:45,948 - INFO - 172.20.0.1 - - [26/Jun/2025 06:40:45] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 06:41:04,475 - INFO - [admin_login_attempt] 172.20.0.1 - POST /admin
+2025-06-26 06:41:04,475 - WARNING - Login attempt - IP: 172.20.0.1, Username: praveen, Password: oraveen
+2025-06-26 06:41:06,478 - INFO - 172.20.0.1 - - [26/Jun/2025 06:41:06] "POST /admin HTTP/1.1" 200 -
+2025-06-26 06:41:11,190 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 06:41:11,190 - INFO - 172.20.0.1 - - [26/Jun/2025 06:41:11] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 06:41:23,591 - INFO - [phpmyadmin_access] 172.20.0.1 - GET /phpmyadmin
+2025-06-26 06:41:23,591 - INFO - 172.20.0.1 - - [26/Jun/2025 06:41:23] "GET /phpmyadmin HTTP/1.1" 200 -
+2025-06-26 06:41:27,716 - INFO - [admin_access] 172.20.0.1 - GET /admin
+2025-06-26 06:41:27,717 - INFO - 172.20.0.1 - - [26/Jun/2025 06:41:27] "GET /admin HTTP/1.1" 200 -
+2025-06-26 06:41:31,212 - INFO - [wordpress_access] 172.20.0.1 - GET /wp-admin
+2025-06-26 06:41:31,212 - INFO - 172.20.0.1 - - [26/Jun/2025 06:41:31] "GET /wp-admin HTTP/1.1" 200 -
+2025-06-26 06:41:46,672 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 06:41:46,672 - INFO - 172.20.0.1 - - [26/Jun/2025 06:41:46] "GET / HTTP/1.1" 200 -
+2025-06-26 06:42:42,680 - INFO - [phpmyadmin_access] 172.20.0.1 - GET /phpmyadmin
+2025-06-26 06:42:42,680 - INFO - 172.20.0.1 - - [26/Jun/2025 06:42:42] "GET /phpmyadmin HTTP/1.1" 200 -
+2025-06-26 06:42:53,228 - INFO - [phpmyadmin_login_attempt] 172.20.0.1 - POST /phpmyadmin/login
+2025-06-26 06:42:53,228 - WARNING - phpMyAdmin login attempt - IP: 172.20.0.1, Username: praveen, Password: praveen
+2025-06-26 06:42:53,229 - INFO - 172.20.0.1 - - [26/Jun/2025 06:42:53] "[31m[1mPOST /phpmyadmin/login HTTP/1.1[0m" 403 -
+2025-06-26 06:43:44,315 - INFO - [phpmyadmin_login_attempt] 172.20.0.1 - POST /phpmyadmin/login
+2025-06-26 06:43:44,315 - WARNING - phpMyAdmin login attempt - IP: 172.20.0.1, Username: praveen, Password: praveen
+2025-06-26 06:43:44,315 - INFO - 172.20.0.1 - - [26/Jun/2025 06:43:44] "[31m[1mPOST /phpmyadmin/login HTTP/1.1[0m" 403 -
+2025-06-26 06:44:01,877 - INFO - [unknown_path_access] 172.20.0.1 - GET /phpmyadmin/login
+2025-06-26 06:44:01,878 - INFO - 172.20.0.1 - - [26/Jun/2025 06:44:01] "[33mGET /phpmyadmin/login HTTP/1.1[0m" 404 -
+2025-06-26 06:44:21,683 - INFO - [phpmyadmin_login_attempt] 172.20.0.1 - POST /phpmyadmin/login
+2025-06-26 06:44:21,683 - WARNING - phpMyAdmin login attempt - IP: 172.20.0.1, Username: pma_username, Password: pma_password
+2025-06-26 06:44:21,683 - INFO - 172.20.0.1 - - [26/Jun/2025 06:44:21] "[31m[1mPOST /phpmyadmin/login HTTP/1.1[0m" 403 -
+2025-06-26 06:44:35,888 - INFO - [unknown_path_access] 172.20.0.1 - GET /phpmyadmin/pma
+2025-06-26 06:44:35,888 - INFO - 172.20.0.1 - - [26/Jun/2025 06:44:35] "[33mGET /phpmyadmin/pma HTTP/1.1[0m" 404 -
+2025-06-26 06:44:53,308 - INFO - [phpmyadmin_access] 172.20.0.1 - GET /phpmyadmin
+2025-06-26 06:44:53,308 - INFO - 172.20.0.1 - - [26/Jun/2025 06:44:53] "GET /phpmyadmin HTTP/1.1" 200 -
+2025-06-26 06:44:56,836 - INFO - [phpmyadmin_login_attempt] 172.20.0.1 - POST /phpmyadmin/login
+2025-06-26 06:44:56,836 - WARNING - phpMyAdmin login attempt - IP: 172.20.0.1, Username: , Password: 
+2025-06-26 06:44:56,837 - INFO - 172.20.0.1 - - [26/Jun/2025 06:44:56] "[31m[1mPOST /phpmyadmin/login HTTP/1.1[0m" 403 -
+2025-06-26 06:45:02,983 - INFO - [admin_login_attempt] 172.20.0.1 - POST /admin
+2025-06-26 06:45:02,983 - WARNING - Login attempt - IP: 172.20.0.1, Username: praveen, Password: oraveen
+2025-06-26 06:45:04,986 - INFO - 172.20.0.1 - - [26/Jun/2025 06:45:04] "POST /admin HTTP/1.1" 200 -
+2025-06-26 06:45:07,035 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 06:45:07,036 - INFO - 172.20.0.1 - - [26/Jun/2025 06:45:07] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 06:52:19,863 - INFO - [admin_login_attempt] 172.20.0.1 - POST /admin
+2025-06-26 06:52:19,863 - WARNING - Login attempt - IP: 172.20.0.1, Username: check1, Password: check1
+2025-06-26 06:52:21,866 - INFO - 172.20.0.1 - - [26/Jun/2025 06:52:21] "POST /admin HTTP/1.1" 200 -
+2025-06-26 07:09:09,511 - INFO - [admin_login_attempt] 172.20.0.1 - POST /admin
+2025-06-26 07:09:09,511 - WARNING - Login attempt - IP: 172.20.0.1, Username: check1, Password: check1
+2025-06-26 07:09:11,515 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:11] "POST /admin HTTP/1.1" 200 -
+2025-06-26 07:09:13,987 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:13,988 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:13] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:18,020 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 07:09:18,020 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:18] "GET / HTTP/1.1" 200 -
+2025-06-26 07:09:19,036 - INFO - [wordpress_access] 172.20.0.1 - GET /wp-admin
+2025-06-26 07:09:19,037 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:19] "GET /wp-admin HTTP/1.1" 200 -
+2025-06-26 07:09:22,448 - INFO - [wordpress_login_attempt] 172.20.0.1 - POST /wp-admin/login
+2025-06-26 07:09:22,448 - WARNING - WordPress login attempt - IP: 172.20.0.1, Username: sdedtygr esj, Password: fcghtrh rt
+2025-06-26 07:09:22,448 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:22] "[31m[1mPOST /wp-admin/login HTTP/1.1[0m" 401 -
+2025-06-26 07:09:26,431 - INFO - [wordpress_login_attempt] 172.20.0.1 - POST /wp-admin/login
+2025-06-26 07:09:26,431 - WARNING - WordPress login attempt - IP: 172.20.0.1, Username: sdedtygr esj, Password: fcghtrh rt
+2025-06-26 07:09:26,431 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:26] "[31m[1mPOST /wp-admin/login HTTP/1.1[0m" 401 -
+2025-06-26 07:09:28,318 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:28,318 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:28] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:39,174 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:39,174 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:39] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:40,741 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:40,741 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:40] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:41,254 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:41,255 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:41] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:41,629 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:41,629 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:41] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:41,861 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:41,861 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:41] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:42,261 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:42,261 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:42] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:42,453 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:42,453 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:42] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:48,540 - INFO - [admin_login_attempt] 172.20.0.1 - POST /admin
+2025-06-26 07:09:48,540 - WARNING - Login attempt - IP: 172.20.0.1, Username: check1, Password: check1
+2025-06-26 07:09:50,543 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:50] "POST /admin HTTP/1.1" 200 -
+2025-06-26 07:09:52,303 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:09:52,304 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:52] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:09:58,098 - INFO - [wordpress_login_attempt] 172.20.0.1 - POST /wp-admin/login
+2025-06-26 07:09:58,098 - WARNING - WordPress login attempt - IP: 172.20.0.1, Username: sdedtygr esj, Password: fcghtrh rt
+2025-06-26 07:09:58,098 - INFO - 172.20.0.1 - - [26/Jun/2025 07:09:58] "[31m[1mPOST /wp-admin/login HTTP/1.1[0m" 401 -
+2025-06-26 07:10:01,667 - INFO - [unknown_path_access] 172.20.0.1 - GET /wp-admin/
+2025-06-26 07:10:01,667 - INFO - 172.20.0.1 - - [26/Jun/2025 07:10:01] "[33mGET /wp-admin/ HTTP/1.1[0m" 404 -
+2025-06-26 07:10:04,563 - INFO - [wordpress_access] 172.20.0.1 - GET /wp-admin
+2025-06-26 07:10:04,563 - INFO - 172.20.0.1 - - [26/Jun/2025 07:10:04] "GET /wp-admin HTTP/1.1" 200 -
+2025-06-26 07:10:07,576 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:10:07,577 - INFO - 172.20.0.1 - - [26/Jun/2025 07:10:07] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:10:08,287 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:10:08,288 - INFO - 172.20.0.1 - - [26/Jun/2025 07:10:08] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:10:08,863 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:10:08,864 - INFO - 172.20.0.1 - - [26/Jun/2025 07:10:08] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:10:44,590 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 07:10:44,590 - INFO - 172.20.0.1 - - [26/Jun/2025 07:10:44] "GET / HTTP/1.1" 200 -
+2025-06-26 07:10:46,402 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 07:10:46,402 - INFO - 172.20.0.1 - - [26/Jun/2025 07:10:46] "GET / HTTP/1.1" 200 -
+2025-06-26 07:39:28,995 - INFO - Starting Honeypot Server...
+2025-06-26 07:39:28,996 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.2:8080
+2025-06-26 07:39:28,996 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 07:39:44,788 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 07:39:44,789 - INFO - 172.20.0.1 - - [26/Jun/2025 07:39:44] "GET / HTTP/1.1" 200 -
+2025-06-26 07:39:50,941 - INFO - [admin_access] 172.20.0.1 - GET /admin
+2025-06-26 07:39:50,943 - INFO - 172.20.0.1 - - [26/Jun/2025 07:39:50] "GET /admin HTTP/1.1" 200 -
+2025-06-26 07:39:54,804 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:39:54,805 - INFO - 172.20.0.1 - - [26/Jun/2025 07:39:54] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:39:56,833 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:39:56,833 - INFO - 172.20.0.1 - - [26/Jun/2025 07:39:56] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:40:12,156 - INFO - [admin_login_attempt] 172.20.0.1 - POST /admin
+2025-06-26 07:40:12,156 - WARNING - Login attempt - IP: 172.20.0.1, Username: checking it's working of not, Password: yesssssssss
+2025-06-26 07:40:14,159 - INFO - 172.20.0.1 - - [26/Jun/2025 07:40:14] "POST /admin HTTP/1.1" 200 -
+2025-06-26 07:40:19,074 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:40:19,075 - INFO - 172.20.0.1 - - [26/Jun/2025 07:40:19] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:40:24,037 - INFO - [phpmyadmin_access] 172.20.0.1 - GET /phpmyadmin
+2025-06-26 07:40:24,037 - INFO - 172.20.0.1 - - [26/Jun/2025 07:40:24] "GET /phpmyadmin HTTP/1.1" 200 -
+2025-06-26 07:40:26,545 - INFO - [admin_access] 172.20.0.1 - GET /admin
+2025-06-26 07:40:26,546 - INFO - 172.20.0.1 - - [26/Jun/2025 07:40:26] "GET /admin HTTP/1.1" 200 -
+2025-06-26 07:40:28,800 - INFO - [wordpress_access] 172.20.0.1 - GET /wp-admin
+2025-06-26 07:40:28,800 - INFO - 172.20.0.1 - - [26/Jun/2025 07:40:28] "GET /wp-admin HTTP/1.1" 200 -
+2025-06-26 07:40:31,611 - INFO - [wordpress_access] 172.20.0.1 - GET /wp-admin
+2025-06-26 07:40:31,611 - INFO - 172.20.0.1 - - [26/Jun/2025 07:40:31] "GET /wp-admin HTTP/1.1" 200 -
+2025-06-26 07:40:33,324 - INFO - [wordpress_login_attempt] 172.20.0.1 - POST /wp-admin/login
+2025-06-26 07:40:33,325 - WARNING - WordPress login attempt - IP: 172.20.0.1, Username: drs trwet , Password: dsf
+2025-06-26 07:40:33,325 - INFO - 172.20.0.1 - - [26/Jun/2025 07:40:33] "[31m[1mPOST /wp-admin/login HTTP/1.1[0m" 401 -
+2025-06-26 07:40:38,387 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:40:38,388 - INFO - 172.20.0.1 - - [26/Jun/2025 07:40:38] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 07:41:00,634 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 07:41:00,635 - INFO - 172.20.0.1 - - [26/Jun/2025 07:41:00] "GET /honeypot/admin/logs HTTP/1.1" 200 -
+2025-06-26 09:40:43,681 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 09:40:43,682 - INFO - 172.20.0.1 - - [26/Jun/2025 09:40:43] "GET / HTTP/1.1" 200 -
+2025-06-26 09:55:49,048 - INFO - [homepage_access] 172.20.0.1 - GET /
+2025-06-26 09:55:49,049 - INFO - 172.20.0.1 - - [26/Jun/2025 09:55:49] "GET / HTTP/1.1" 200 -
+2025-06-26 09:56:20,213 - INFO - [honeypot_admin_access] 172.20.0.1 - GET /honeypot/admin/logs
+2025-06-26 09:56:20,214 - INFO - 172.20.0.1 - - [26/Jun/2025 09:56:20] "GET /honeypot/admin/logs HTTP/1.1" 200 -

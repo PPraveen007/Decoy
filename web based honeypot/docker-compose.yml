@@ -1,0 +1,63 @@
+version: '3.3'
+
+services:
+  honeypot:
+    build: .
+    container_name: web-honeypot
+    ports:
+      - "8080:8080"
+      - "80:8080"   # Optional: also bind to port 80
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - honeypot-network
+    
+    # # Resource limits
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '0.5'
+    #       memory: 256M
+    #     reservations:
+    #       cpus: '0.1'
+    #       memory: 64M
+
+#   # Optional: Add a log aggregator
+#   logrotate:
+#     image: alpine:latest
+#     container_name: honeypot-logrotate
+#     volumes:
+#       - ./logs:/app/logs
+#     command: >
+#       sh -c "
+#         apk add --no-cache logrotate &&
+#         echo '/app/logs/*.log {
+#           daily
+#           rotate 7
+#           compress
+#           delaycompress
+#           missingok
+#           notifempty
+#           create 644 root root
+#         }' > /etc/logrotate.d/honeypot &&
+#         while true; do
+#           logrotate /etc/logrotate.d/honeypot
+#           sleep 86400
+#         done
+#       "
+#     restart: unless-stopped
+#     networks:
+#       - honeypot-network
+
+networks:
+  honeypot-network:
+    driver: bridge
+
+volumes:
+  honeypot-logs:
+  honeypot-data:
