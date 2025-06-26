@@ -4,14 +4,12 @@ Simple Web-based Honeypot
 Simulates various services and logs all interactions for security monitoring
 """
 
-from flask import Flask, request, render_template_string, jsonify, redirect, make_response
+from flask import Flask, request, render_template_string, jsonify
 import logging
 import json
 import datetime
 import os
 import sqlite3
-from werkzeug.serving import WSGIRequestHandler
-import threading
 import time
 
 app = Flask(__name__)

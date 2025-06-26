@@ -72,11 +72,6 @@ The `deploy.sh` script provides several management commands:
 # Restart the honeypot
 ./deploy.sh restart
 
-# Backup data
-./deploy.sh backup
-
-# Clean old logs
-./deploy.sh clean
 ```
 
 ## Honeypot Endpoints
